@@ -4,11 +4,12 @@ import { program } from 'commander'
 
 import { createRequire } from 'module'
 
-import genDiff from './index.js'
+import genDiff from './src/index.js'
 
 import path from 'path'
 
-// Используем createRequire для безопасного импорта package.json
+import fs from 'fs'
+
 const require = createRequire(import.meta.url)
 const pkg = require('./package.json')
 

@@ -1,6 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1771752460308" clover="3.2.0">
-  <project timestamp="1771752460308" name="All files">
-    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
+<coverage generated="1771764151756" clover="3.2.0">
+  <project timestamp="1771764151756" name="All files">
+    <metrics statements="53" coveredstatements="49" conditionals="24" coveredconditionals="20" methods="9" coveredmethods="9" elements="86" coveredelements="78" complexity="0" loc="53" ncloc="53" packages="1" files="1" classes="1"/>
+    <file name="index.js" path="/run/media/dos/84BC2FE9BC2FD488/Learning/qa-auto-engineer-javascript-project-87/src/index.js">
+      <metrics statements="53" coveredstatements="49" conditionals="24" coveredconditionals="20" methods="9" coveredmethods="9"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="9" count="2" type="stmt"/>
+      <line num="10" count="2" type="cond" truecount="1" falsecount="1"/>
+      <line num="11" count="2" type="stmt"/>
+      <line num="13" count="0" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="17" count="2" type="stmt"/>
+      <line num="18" count="2" type="stmt"/>
+      <line num="19" count="2" type="stmt"/>
+      <line num="22" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="30" count="1" type="stmt"/>
+      <line num="31" count="1" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="34" count="1" type="stmt"/>
+      <line num="35" count="5" type="stmt"/>
+      <line num="36" count="5" type="stmt"/>
+      <line num="38" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="39" count="2" type="stmt"/>
+      <line num="41" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="42" count="1" type="stmt"/>
+      <line num="44" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="45" count="1" type="stmt"/>
+      <line num="52" count="1" type="stmt"/>
+      <line num="56" count="1" type="stmt"/>
+      <line num="57" count="6" type="cond" truecount="1" falsecount="1"/>
+      <line num="58" count="0" type="stmt"/>
+      <line num="60" count="6" type="cond" truecount="1" falsecount="1"/>
+      <line num="61" count="0" type="stmt"/>
+      <line num="63" count="6" type="cond" truecount="1" falsecount="1"/>
+      <line num="64" count="0" type="stmt"/>
+      <line num="66" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="67" count="2" type="stmt"/>
+      <line num="69" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="70" count="2" type="stmt"/>
+      <line num="72" count="2" type="stmt"/>
+      <line num="75" count="1" type="stmt"/>
+      <line num="76" count="1" type="stmt"/>
+      <line num="77" count="5" type="stmt"/>
+      <line num="79" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="80" count="1" type="stmt"/>
+      <line num="82" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="83" count="2" type="stmt"/>
+      <line num="85" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="86" count="1" type="stmt"/>
+      <line num="87" count="1" type="stmt"/>
+      <line num="88" count="1" type="stmt"/>
+      <line num="90" count="1" type="stmt"/>
+      <line num="93" count="1" type="stmt"/>
+      <line num="97" count="1" type="stmt"/>
+      <line num="98" count="1" type="stmt"/>
+      <line num="100" count="1" type="stmt"/>
+      <line num="101" count="1" type="stmt"/>
+    </file>
   </project>
 </coverage>

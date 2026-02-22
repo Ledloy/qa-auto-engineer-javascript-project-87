@@ -13,12 +13,16 @@ export default {
   collectCoverage: false,
   coverageDirectory: 'coverage',
   coverageReporters: ['json', 'lcov', 'text', 'clover'],
+
   collectCoverageFrom: [
     'src/**/*.js',
-    '!src/**/*.test.js'
+    '!src/**/*.test.js',
+    '!src/**/*.config.js',
+    '!src/gendiff.js'
   ],
   coveragePathIgnorePatterns: [
     '/node_modules/minimatch/',
     '/node_modules/test-exclude/'
   ]
 }
+

@@ -1,10 +1,10 @@
+import fs from 'fs'
+
 import { test, expect } from '@jest/globals'
 
 import { getFixturePath } from './testUtils.js'
 
 import genDiff from '../src/index.js'
-
-import fs from 'fs'
 
 const expectedStylish = `{
   - follow: false

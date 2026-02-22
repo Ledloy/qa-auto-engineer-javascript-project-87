@@ -1,6 +1,7 @@
-import fs from 'fs'
 
 import path from 'path'
+
+import fs from 'fs'
 
 import sortBy from 'lodash/sortBy.js'
 
