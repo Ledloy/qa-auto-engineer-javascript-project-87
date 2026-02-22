@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testExecutions version="1">
-  <file path="/run/media/dos/84BC2FE9BC2FD488/Learning/qa-auto-engineer-javascript-project-87/__tests__/gendiff.test.js">
-    <testCase name="stylish formatter" duration="4"/>
-  </file>
-</testExecutions>

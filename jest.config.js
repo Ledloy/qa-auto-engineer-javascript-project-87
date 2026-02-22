@@ -13,7 +13,6 @@ export default {
   collectCoverage: false,
   coverageDirectory: 'coverage',
   coverageReporters: ['json', 'lcov', 'text', 'clover'],
-  testResultsProcessor: 'jest-sonar-reporter',
 
   collectCoverageFrom: [
     'src/**/*.js',
@@ -24,6 +23,15 @@ export default {
   coveragePathIgnorePatterns: [
     '/node_modules/minimatch/',
     '/node_modules/test-exclude/'
+  ],
+
+  reporters: [
+    'default',
+    ['jest-junit', {
+      outputDirectory: 'coverage',
+      outputName: 'sonar-report.xml',
+      ancestorSeparator: ' › ',
+      usePathForSuiteName: 'true'
+    }]
   ]
 }
-
