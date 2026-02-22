@@ -14,6 +14,7 @@ test-watch:
 	npm run test-watch
 
 test-coverage:
+	mkdir -p coverage
 	npm run test-coverage
 	
 gendiff:

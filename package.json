@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Программа, определяющая разницу между двумя структурами данных.",
   "overrides": {
-  "minimatch": "^10.2.1",
-  "test-exclude": "^7.0.0"
-},
+    "minimatch": "^10.2.1",
+    "test-exclude": "^7.0.0"
+  },
   "bin": {
     "gendiff": "./bin/gendiff.js"
   },
@@ -21,6 +21,9 @@
     "test-coverage": "NODE_OPTIONS=--experimental-vm-modules jest --coverage",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
+  },
+  "jest": {
+    "testResultsProcessor": "jest-sonar-reporter"
   },
   "repository": {
     "type": "git",
@@ -48,6 +51,7 @@
     "eslint": "^10.0.1",
     "globals": "^17.3.0",
     "jest": "^30.0.5",
+    "jest-sonar-reporter": "^2.0.0",
     "lint-staged": "^16.1.5",
     "simple-git-hooks": "^2.13.1"
   }

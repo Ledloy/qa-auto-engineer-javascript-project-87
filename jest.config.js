@@ -13,6 +13,7 @@ export default {
   collectCoverage: false,
   coverageDirectory: 'coverage',
   coverageReporters: ['json', 'lcov', 'text', 'clover'],
+  testResultsProcessor: 'jest-sonar-reporter',
 
   collectCoverageFrom: [
     'src/**/*.js',
