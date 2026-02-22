@@ -22,9 +22,6 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
-  "jest": {
-    "testResultsProcessor": "jest-sonar-reporter"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ledloy/qa-auto-engineer-javascript-project-87.git"
