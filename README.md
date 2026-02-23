@@ -14,6 +14,6 @@
 
 [![asciicast](https://asciinema.org/a/A5QhDAJCExzyCZoP.svg?cols=80&rows=15)](https://asciinema.org/a/A5QhDAJCExzyCZoP)
 
-### Команда для запуска (скопируйте и вставьте):
+### Команда для запуска:
 ```bash
 gendiff fixtures/file1.json fixtures/file2.json
