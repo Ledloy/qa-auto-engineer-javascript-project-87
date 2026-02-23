@@ -4,7 +4,7 @@ import { program } from 'commander'
 
 import { createRequire } from 'module'
 
-import genDiff from '../src/index.js' // Правильный путь - НЕ './src/index.js'
+import genDiff from '../src/index.js'
 
 import path from 'path'
 

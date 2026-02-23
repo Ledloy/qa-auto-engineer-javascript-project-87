@@ -42,14 +42,13 @@
     "*.js": "eslint --fix"
   },
   "devDependencies": {
+    "@casualbot/jest-sonar-reporter": "^2.5.0",
     "@eslint/js": "^10.0.1",
     "@jest/globals": "^30.2.0",
     "@stylistic/eslint-plugin": "^5.9.0",
     "eslint": "^10.0.1",
     "globals": "^17.3.0",
     "jest": "^30.0.5",
-    "jest-junit": "^16.0.0",
-    "jest-sonar-reporter": "^2.0.0",
     "lint-staged": "^16.1.5",
     "simple-git-hooks": "^2.13.1"
   }

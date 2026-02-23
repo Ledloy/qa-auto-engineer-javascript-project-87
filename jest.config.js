@@ -27,14 +27,14 @@ export default {
 
   reporters: [
     'default',
-    ['jest-junit', {
-      outputDirectory: 'coverage',
-      outputName: 'sonar-report.xml',
-      ancestorSeparator: ' › ',
-      usePathForSuiteName: 'true',
-      suiteNameTemplate: '{filepath}',
-      classNameTemplate: '{classname}',
-      titleTemplate: '{title}'
-    }]
+    [
+      '@casualbot/jest-sonar-reporter',
+      {
+        outputDirectory: 'coverage',
+        outputName: 'sonar-report.xml',
+        relativePath: true,
+        indent: 4
+      }
+    ]
   ]
 }
