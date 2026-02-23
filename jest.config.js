@@ -31,7 +31,10 @@ export default {
       outputDirectory: 'coverage',
       outputName: 'sonar-report.xml',
       ancestorSeparator: ' › ',
-      usePathForSuiteName: 'true'
+      usePathForSuiteName: 'true',
+      suiteNameTemplate: '{filepath}',
+      classNameTemplate: '{classname}',
+      titleTemplate: '{title}'
     }]
   ]
 }

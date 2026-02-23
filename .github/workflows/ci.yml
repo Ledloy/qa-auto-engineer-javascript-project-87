@@ -39,6 +39,9 @@ jobs:
       - run: make lint
       - run: make test
       - run: make test-coverage
+
+      - name: Debug coverage file
+        run: cat coverage/sonar-report.xml
       
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v6
