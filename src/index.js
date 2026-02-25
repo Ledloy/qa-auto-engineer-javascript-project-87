@@ -1,23 +1,10 @@
-
 import path from 'path'
 
 import fs from 'fs'
 
 import sortBy from 'lodash/sortBy.js'
 
-const getParser = (filepath) => {
-  const ext = path.extname(filepath)
-  if (ext === '.json') {
-    return (content) => JSON.parse(content)
-  }
-  throw new Error(`Unknown format: ${ext}`)
-}
-
-const readData = (filepath) => {
-  const content = fs.readFileSync(filepath, 'utf-8')
-  const parser = getParser(filepath)
-  return parser(content)
-}
+import readFileData from './parsers.js'
 
 const STATUS = {
   ADDED: 'added',
@@ -46,7 +33,7 @@ const generateDiff = (data1, data2) => {
         key,
         value1: data1[key],
         value2: data2[key],
-        status: STATUS.CHANGED
+        status: STATUS.CHANGED,
       }
     }
     return { key, value: data1[key], status: STATUS.UNCHANGED }
@@ -93,10 +80,45 @@ const renderStylish = (diff) => {
   return `{\n${lines.join('\n')}\n}`
 }
 
-export default (filepath1, filepath2) => {
-  const data1 = readData(filepath1)
-  const data2 = readData(filepath2)
+const renderPlain = (diff) => {
+  const lines = diff.map((node) => {
+    const { key, status } = node
+
+    if (status === STATUS.ADDED) {
+      return `Property '${key}' was added with value: ${formatValue(node.value)}`
+    }
+    if (status === STATUS.REMOVED) {
+      return `Property '${key}' was removed`
+    }
+    if (status === STATUS.CHANGED) {
+      return `Property '${key}' was updated. From ${formatValue(node.value1)} to ${formatValue(node.value2)}`
+    }
+    return ''
+  })
+
+  return lines.filter((line) => line !== '').join('\n')
+}
+
+const renderJson = (diff) => {
+  return JSON.stringify(diff, null, 2)
+}
+
+const formatters = {
+  stylish: renderStylish,
+  plain: renderPlain,
+  json: renderJson,
+}
+
+export default (filepath1, filepath2, format = 'stylish') => {
+  const data1 = readFileData(filepath1)
+  const data2 = readFileData(filepath2)
 
   const diffTree = generateDiff(data1, data2)
-  return renderStylish(diffTree)
+  const formatter = formatters[format]
+
+  if (!formatter) {
+    throw new Error(`Unknown format: ${format}`)
+  }
+
+  return formatter(diffTree)
 }
