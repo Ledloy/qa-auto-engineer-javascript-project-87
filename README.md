@@ -25,7 +25,10 @@
 
 [![asciicast](https://asciinema.org/a/A5QhDAJCExzyCZoP.svg?cols=80&rows=15)](https://asciinema.org/a/A5QhDAJCExzyCZoP)
 
-**Команда:** `gendiff fixtures/file1.json fixtures/file2.json`
+**Команда:** 
+```bash
+gendiff fixtures/file1.json fixtures/file2.json
+```
 
 </details>
 
@@ -37,10 +40,15 @@
 [![asciicast](https://asciinema.org/a/QL7pLajMH2z0Dr5l.svg?cols=80&rows=15)](https://asciinema.org/a/QL7pLajMH2z0Dr5l)
 
 **Команды:**
-
-- `gendiff __fixtures__/before.yml __fixtures__/after.yml` — stylish формат
-- `gendiff __fixtures__/before.yml __fixtures__/after.yml -f plain` — plain формат
-- `gendiff __fixtures__/before.yml __fixtures__/after.yml -f json` — json формат
+```bash
+gendiff __fixtures__/before.yml __fixtures__/after.yml` — stylish формат
+```
+```bash
+gendiff __fixtures__/before.yml __fixtures__/after.yml -f plain` — plain формат
+```
+```bash
+gendiff __fixtures__/before.yml __fixtures__/after.yml -f json` — json формат
+```
 
 </details>
 
