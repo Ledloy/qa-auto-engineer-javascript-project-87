@@ -1,20 +1,18 @@
-import js from '@eslint/js'
+import globals from 'globals';
+import stylistic from '@stylistic/eslint-plugin';
 
-import globals from 'globals'
-
-import { defineConfig } from 'eslint/config'
-
-import stylistic from '@stylistic/eslint-plugin'
-
-export default defineConfig([
+export default [
   {
     files: ['**/*.{js,mjs,cjs}'],
     languageOptions: {
-      globals: globals.node,
-      ecmaVersion: 2022
+      globals: {
+        ...globals.node,
+      },
+      ecmaVersion: 2022,
+      sourceType: 'module',
     },
     plugins: {
-      '@stylistic': stylistic
+      '@stylistic': stylistic,
     },
     rules: {
       '@stylistic/semi': ['error', 'never'],
@@ -25,12 +23,12 @@ export default defineConfig([
       '@stylistic/comma-spacing': ['error', { before: false, after: true }],
       '@stylistic/no-multi-spaces': 'error',
       '@stylistic/no-multiple-empty-lines': ['error', { max: 1 }],
-
+      
       'padding-line-between-statements': [
         'error',
         { blankLine: 'always', prev: 'import', next: '*' },
       ],
-    }
+    },
   },
   {
     ignores: [
@@ -39,4 +37,4 @@ export default defineConfig([
       '__fixtures__/'
     ]
   }
-])
+];
