@@ -3,9 +3,7 @@ export default {
   testEnvironment: 'node',
   testMatch: ['**/__tests__/**/*.test.js', '**/?(*.)+(spec|test).[jt]s?(x)'],
   transform: {},
-  moduleNameMapper: {
-    '^(\\.{1,2}/.*)\\.js$': '$1'
-  },
+  
   transformIgnorePatterns: [
     'node_modules/(?!es-toolkit|test-exclude|glob|jest-config|@jest/transform)'
   ],
