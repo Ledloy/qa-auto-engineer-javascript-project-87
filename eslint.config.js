@@ -1,5 +1,6 @@
-import globals from 'globals';
-import stylistic from '@stylistic/eslint-plugin';
+import globals from 'globals'
+
+import stylistic from '@stylistic/eslint-plugin'
 
 export default [
   {
@@ -23,7 +24,7 @@ export default [
       '@stylistic/comma-spacing': ['error', { before: false, after: true }],
       '@stylistic/no-multi-spaces': 'error',
       '@stylistic/no-multiple-empty-lines': ['error', { max: 1 }],
-      
+
       'padding-line-between-statements': [
         'error',
         { blankLine: 'always', prev: 'import', next: '*' },
@@ -37,4 +38,4 @@ export default [
       '__fixtures__/'
     ]
   }
-];
+]
