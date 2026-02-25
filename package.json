@@ -1,1 +1,1 @@
-{"dependencies":{"lodash":"^<current_version>","js-yaml":"^4.1.0"}}
+{\n  "name": "@hexlet/code",\n  "version": "1.0.0",\n  "main": "src/index.js",\n  "scripts": {\n    "test": "jest",\n    "lint": "eslint .",\n    "start": "node src/index.js"\n  },\n  "type": "module",\n  "dependencies": {\n    "js-yaml": "^4.1.0",\n    "existing-dependency-1": "latest",\n    "existing-dependency-2": "latest"\n  }\n}
