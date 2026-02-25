@@ -1,17 +1,14 @@
 import fs from 'fs';
 import path from 'path';
-import { createRequire } from 'module';  // ← ДОБАВИТЬ
-
-const require = createRequire(import.meta.url);  // ← ДОБАВИТЬ
-const yaml = require('js-yaml');  // ← ИСПОЛЬЗОВАТЬ require вместо import
+import { parse } from 'yaml'; 
 
 const getParser = (filepath) => {
   const ext = path.extname(filepath).slice(1);
   
   const parsers = {
     json: (data) => JSON.parse(data),
-    yml: (data) => yaml.load(data),
-    yaml: (data) => yaml.load(data),
+    yml: (data) => parse(data),     
+    yaml: (data) => parse(data),     
   };
   
   return parsers[ext];
