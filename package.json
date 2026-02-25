@@ -40,7 +40,10 @@
     "lodash": "^4.17.23"
   },
   "lint-staged": {
-    "*.js": "eslint --fix"
+    "!node_modules/**/*.js": "echo 'Skipping node_modules'",
+    "src/**/*.js": "eslint --fix",
+    "__tests__/**/*.js": "eslint --fix",
+    "bin/**/*.js": "eslint --fix"
   },
   "devDependencies": {
     "@casualbot/jest-sonar-reporter": "^2.5.0",
