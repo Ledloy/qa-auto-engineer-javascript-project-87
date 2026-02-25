@@ -18,22 +18,22 @@ jobs:
         node-version: [22.x, 24.x]
 
     steps:
-  - uses: actions/checkout@v6
-    with:
-      fetch-depth: 0
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
-  - name: Use Node.js ${{ matrix.node-version }}
-    uses: actions/setup-node@v6
-    with:
-      node-version: ${{ matrix.node-version }}
-      cache: 'npm'
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
 
-  - name: Upgrade npm
-    run: npm install -g npm@latest 
+      - name: Upgrade npm
+        run: npm install -g npm@latest 
 
-  - run: npm ci 
-  - run: npm run test  
-  - run: npm run test-coverage  
+      - run: npm ci 
+      - run: npm run test  
+      - run: npm run test-coverage  
 
 
       - name: Fix sonar-report.xml paths for SonarQube
