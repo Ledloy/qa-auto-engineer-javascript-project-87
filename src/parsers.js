@@ -1,27 +1,21 @@
-import fs from 'fs'
-
-import path from 'path'
-
-import yaml from 'js-yaml'
+import fs from 'fs';
+import path from 'path';
+import * as yaml from 'js-yaml';
 
 const getParser = (filepath) => {
-  const ext = path.extname(filepath)
+  const ext = path.extname(filepath).slice(1);
+  
+  const parsers = {
+    json: (data) => JSON.parse(data),
+    yml: (data) => yaml.load(data),
+    yaml: (data) => yaml.load(data),
+  };
+  
+  return parsers[ext];
+};
 
-  switch (ext) {
-    case '.json':
-      return (content) => JSON.parse(content)
-    case '.yml':
-    case '.yaml':
-      return (content) => yaml.load(content)
-    default:
-      throw new Error(`Unknown file format: ${ext}`)
-  }
-}
-
-export const readFileData = (filepath) => {
-  const content = fs.readFileSync(filepath, 'utf-8')
-  const parser = getParser(filepath)
-  return parser(content)
-}
-
-export default readFileData
+export default (filepath) => {
+  const data = fs.readFileSync(filepath, 'utf8');
+  const parser = getParser(filepath);
+  return parser(data);
+};
