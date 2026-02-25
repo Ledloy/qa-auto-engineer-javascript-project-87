@@ -4,7 +4,7 @@ import fs from 'fs'
 
 import sortBy from 'lodash/sortBy.js'
 
-import readFileData from './parsers.js'
+import readFileData from '../parsers.js'
 
 const STATUS = {
   ADDED: 'added',
