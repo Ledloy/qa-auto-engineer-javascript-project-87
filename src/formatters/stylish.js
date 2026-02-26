@@ -22,7 +22,7 @@ const formatValue = (value) => {
     return value
   }
 
-  return `'${String(value)}'`
+  return `${String(value)}`
 }
 
 export default (diff) => {
