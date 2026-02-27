@@ -5,7 +5,7 @@ export default {
   transform: {},
 
   transformIgnorePatterns: [
-    'node_modules/(?!es-toolkit|test-exclude|glob|jest-config|@jest/transform)'
+    'node_modules/(?!es-toolkit|test-exclude|glob|jest-config|@jest/transform)',
   ],
 
   collectCoverage: false,
@@ -16,11 +16,11 @@ export default {
     'src/**/*.js',
     '!src/**/*.test.js',
     '!src/**/*.config.js',
-    '!src/gendiff.js'
+    '!src/gendiff.js',
   ],
   coveragePathIgnorePatterns: [
     '/node_modules/minimatch/',
-    '/node_modules/test-exclude/'
+    '/node_modules/test-exclude/',
   ],
 
   reporters: [
@@ -31,8 +31,8 @@ export default {
         outputDirectory: 'coverage',
         outputName: 'sonar-report.xml',
         relativePath: true,
-        indent: 4
-      }
-    ]
-  ]
+        indent: 4,
+      },
+    ],
+  ],
 }

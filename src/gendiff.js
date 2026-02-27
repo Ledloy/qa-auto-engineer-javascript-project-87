@@ -2,20 +2,18 @@
 
 import { program } from 'commander'
 
-import { createRequire } from 'module'
-
-import genDiff from './src/index.js'
-
 import path from 'path'
 
-import fs from 'fs'
+import { createRequire } from 'module'
+
+import genDiff from './index.js'
 
 const require = createRequire(import.meta.url)
-const pkg = require('./package.json')
+const pkg = require('../package.json')
 
 program
   .name('gendiff')
-  .description('Compares two configuration files and shows a difference.')
+  .description('"Вычислитель отличий – программа, определяющая разницу между двумя структурами данных"')
   .version(pkg.version)
   .argument('<filepath1>', 'Path to the first file')
   .argument('<filepath2>', 'Path to the second file')
@@ -25,7 +23,7 @@ program
     const absPath2 = path.resolve(filepath2)
 
     try {
-      const result = genDiff(absPath1, absPath2)
+      const result = genDiff(absPath1, absPath2, options.format)
       console.log(result)
     } catch (error) {
       console.error(`Error: ${error.message}`)

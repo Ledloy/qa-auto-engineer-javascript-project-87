@@ -1,23 +1,16 @@
-import path from 'path'
-
-import fs from 'fs'
-
 import readFileData from './parsers.js'
 
 import getFormatter from './formatters/index.js'
 
 export default (filepath1, filepath2, formatName = 'stylish') => {
-  // 1. Читаем данные из файлов
+
   const data1 = readFileData(filepath1)
   const data2 = readFileData(filepath2)
 
-  // 2. Генерируем дерево отличий
   const diffTree = generateDiff(data1, data2)
 
-  // 3. Выбираем форматер через фабрику
   const format = getFormatter(formatName)
 
-  // 4. Возвращаем отформатированный результат
   return format(diffTree)
 }
 

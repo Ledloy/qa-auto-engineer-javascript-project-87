@@ -14,7 +14,7 @@ export const getFixturePath = (filename) =>
   path.join(rootDir, '__fixtures__', filename)
 
 export const checkFixturesExist = (...filenames) => {
-  filenames.forEach(filename => {
+  filenames.forEach((filename) => {
     const path = getFixturePath(filename)
     if (!fs.existsSync(path)) {
       throw new Error(`Fixture file not found: ${path}`)
@@ -24,7 +24,7 @@ export const checkFixturesExist = (...filenames) => {
 
 export const logFixturePaths = (...filenames) => {
   console.log('Fixture paths:')
-  filenames.forEach(filename => {
+  filenames.forEach((filename) => {
     const path = getFixturePath(filename)
     console.log(`  ${filename}: ${path} - exists: ${fs.existsSync(path)}`)
   })
