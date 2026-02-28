@@ -49,7 +49,6 @@ export default [
     ignores: [
       'node_modules/',
       'coverage/',
-      '__fixtures__/',
     ],
   },
 ]
