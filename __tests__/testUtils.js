@@ -11,7 +11,7 @@ const __dirname = dirname(__filename)
 export const rootDir = dirname(__dirname)
 
 export const getFixturePath = (filename) =>
-  path.join(rootDir, '__fixtures__', filename)
+  path.join(rootDir, '__fixtures__', (filename))
 
 export const checkFixturesExist = (...filenames) => {
   filenames.forEach((filename) => {

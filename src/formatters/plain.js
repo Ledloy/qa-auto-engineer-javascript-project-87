@@ -40,5 +40,5 @@ export default (diff) => {
     return ''
   })
 
-  return lines.filter((line) => line !== '').join('\n')
+  return lines.filter((line) => (line) !== '').join('\n')
 }
