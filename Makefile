@@ -8,9 +8,10 @@ lint:
 	npm run lint
 
 lint-fix:
-	npx eslint src --fix
+	npx eslint --config eslint.config.js --fix .
 
 fix: lint-fix
+
 
 test-watch:
 	npm run test-watch

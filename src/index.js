@@ -3,7 +3,6 @@ import readFileData from './parsers.js'
 import getFormatter from './formatters/index.js'
 
 export default (filepath1, filepath2, formatName = 'stylish') => {
-
   const data1 = readFileData(filepath1)
   const data2 = readFileData(filepath2)
 
