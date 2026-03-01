@@ -5,5 +5,5 @@ export const formatValue = (value) => {
   return String(value)
 }
 
-export const isObject = (value) =>
+export const isObject = value =>
   typeof value === 'object' && value !== null && !Array.isArray(value)

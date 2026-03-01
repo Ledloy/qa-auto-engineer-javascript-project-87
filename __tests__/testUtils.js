@@ -11,13 +11,13 @@ const __dirname = dirname(__filename)
 
 export const rootDir = dirname(__dirname)
 
-export const getFixturePath = (filename) =>
+export const getFixturePath = filename =>
   path.join(rootDir, '__fixtures__', filename)
 
-export const getExpectedPath = (filename) =>
+export const getExpectedPath = filename =>
   path.join(rootDir, '__fixtures__', 'expected', filename)
 
-export const readExpected = (filename) =>
+export const readExpected = filename =>
   readFileSync(getExpectedPath(filename), 'utf8').trim()
 
 export const checkFixturesExist = (...filenames) => {

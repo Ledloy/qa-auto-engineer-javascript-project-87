@@ -23,7 +23,7 @@ export default (diff) => {
           return ''
       }
     })
-    .filter((line) => line !== '')
+    .filter(line => line !== '')
     .join('\n')
 
   return `{\n${lines}\n}`
