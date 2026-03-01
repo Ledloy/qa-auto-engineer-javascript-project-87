@@ -1,9 +1,9 @@
-export const formatValue = (value) => {
+export const formatValue = value => {
   if (typeof value === 'object' && value !== null) {
     return '[complex value]'
   }
   return String(value)
 }
 
-export const isObject = (value) =>
+export const isObject = value =>
   typeof value === 'object' && value !== null && !Array.isArray(value)

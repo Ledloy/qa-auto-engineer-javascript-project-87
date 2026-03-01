@@ -4,7 +4,7 @@ import stylish from './stylish.js'
 
 import json from './json.js'
 
-export default (formatName) => {
+export default formatName => {
   switch (formatName) {
     case 'plain':
       return plain

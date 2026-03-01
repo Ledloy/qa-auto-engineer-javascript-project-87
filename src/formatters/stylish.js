@@ -1,7 +1,7 @@
 import { STATUS } from '../constants.js'
 
-export default (diff) => {
-  const formatValue = (value) => {
+export default diff => {
+  const formatValue = value => {
     if (typeof value === 'object' && value !== null) {
       return '[complex value]'
     }
@@ -9,7 +9,7 @@ export default (diff) => {
   }
 
   const lines = diff
-    .map((item) => {
+    .map(item => {
       switch (item.status) {
         case STATUS.ADDED:
           return `  + ${item.key}: ${formatValue(item.value)}`
@@ -23,7 +23,7 @@ export default (diff) => {
           return ''
       }
     })
-    .filter((line) => line !== '')
+    .filter(line => line !== '')
     .join('\n')
 
   return `{\n${lines}\n}`

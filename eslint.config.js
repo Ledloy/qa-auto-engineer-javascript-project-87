@@ -19,7 +19,6 @@ export default [
     },
 
     rules: {
-
       '@stylistic/semi': ['error', 'never'],
       '@stylistic/quotes': ['error', 'single'],
 
@@ -33,11 +32,12 @@ export default [
       '@stylistic/comma-spacing': ['error', { before: false, after: true }],
       '@stylistic/comma-dangle': ['error', 'always-multiline'],
 
-      '@stylistic/arrow-parens': ['error', 'always'],
+      '@stylistic/arrow-parens': ['error', 'as-needed'],
 
       '@stylistic/brace-style': ['error', '1tbs'],
 
       '@stylistic/padded-blocks': ['error', 'never'],
+      '@stylistic/operator-linebreak': ['error', 'before'],
       'padding-line-between-statements': [
         'error',
         { blankLine: 'always', prev: 'import', next: '*' },
