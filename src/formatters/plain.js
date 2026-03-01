@@ -2,9 +2,9 @@ import { STATUS } from '../constants.js'
 
 import { formatValue } from '../utils/formatValue.js'
 
-export default diff => {
+export default (diff) => {
   return diff
-    .map(item => {
+    .map((item) => {
       switch (item.status) {
         case STATUS.ADDED:
           return `Property '${item.key}' was added with value: ${formatValue(item.value)}`
@@ -16,6 +16,6 @@ export default diff => {
           return ''
       }
     })
-    .filter(line => line !== '')
+    .filter((line) => line !== '')
     .join('\n')
 }

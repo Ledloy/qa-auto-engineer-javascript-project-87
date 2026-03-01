@@ -4,13 +4,13 @@ import path from 'path'
 
 import { parse } from 'yaml'
 
-const getParser = filepath => {
+const getParser = (filepath) => {
   const ext = path.extname(filepath).slice(1).toLowerCase()
 
   const parsers = {
-    json: data => JSON.parse(data),
-    yml: data => parse(data),
-    yaml: data => parse(data),
+    json: (data) => JSON.parse(data),
+    yml: (data) => parse(data),
+    yaml: (data) => parse(data),
   }
 
   const parser = parsers[ext]
@@ -25,7 +25,7 @@ const getParser = filepath => {
   return parser
 }
 
-export default filepath => {
+export default (filepath) => {
   if (!fs.existsSync(filepath)) {
     throw new Error(`File not found: ${filepath}`)
   }

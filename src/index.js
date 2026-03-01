@@ -17,7 +17,7 @@ const generateDiff = (data1, data2) => {
   const keys2 = Object.keys(data2)
   const allKeys = [...new Set([...keys1, ...keys2])].sort()
 
-  return allKeys.map(key => {
+  return allKeys.map((key) => {
     const has1 = Object.hasOwn(data1, key)
     const has2 = Object.hasOwn(data2, key)
 

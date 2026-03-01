@@ -16,12 +16,12 @@ export default [
     },
     rules: {
       // ✅ Core rules (как на Hexlet)
-      'arrow-parens': ['error', 'as-needed'],
+      'arrow-parens': ['error', 'always'],
       'brace-style': ['error', '1tbs'],
       'operator-linebreak': ['error', 'before'],
 
       // ✅ Stylistic plugin rules (дублируем для надёжности)
-      '@stylistic/arrow-parens': ['error', 'as-needed'],
+      '@stylistic/arrow-parens': ['error', 'always'],
       '@stylistic/brace-style': ['error', '1tbs'],
       '@stylistic/operator-linebreak': ['error', 'before'],
 
