@@ -2,22 +2,14 @@ import readFileData from './parsers.js'
 
 import getFormatter from './formatters/index.js'
 
+import { STATUS } from './constants.js'
+
 export default (filepath1, filepath2, formatName = 'stylish') => {
   const data1 = readFileData(filepath1)
   const data2 = readFileData(filepath2)
-
   const diffTree = generateDiff(data1, data2)
-
   const format = getFormatter(formatName)
-
   return format(diffTree)
-}
-
-const STATUS = {
-  ADDED: 'added',
-  REMOVED: 'removed',
-  CHANGED: 'changed',
-  UNCHANGED: 'unchanged',
 }
 
 const generateDiff = (data1, data2) => {

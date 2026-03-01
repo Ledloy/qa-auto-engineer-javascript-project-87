@@ -1,44 +1,21 @@
-const STATUS = {
-  ADDED: 'added',
-  REMOVED: 'removed',
-  CHANGED: 'changed',
-  UNCHANGED: 'unchanged',
-}
+import { STATUS } from '../constants.js'
 
-const formatValue = (value) => {
-  if (value === null) {
-    return 'null'
-  }
-  if (value === undefined) {
-    return 'undefined'
-  }
-  if (typeof value === 'object') {
-    return '[complex value]'
-  }
-  if (typeof value === 'boolean') {
-    return value
-  }
-  if (typeof value === 'number') {
-    return value
-  }
-  return `'${String(value)}'`
-}
+import { formatValue } from '../utils/formatValue.js'
 
 export default (diff) => {
-  const lines = diff.map((node) => {
-    const { key, status } = node
-
-    if (status === STATUS.ADDED) {
-      return `Property '${key}' was added with value: ${formatValue(node.value)}`
-    }
-    if (status === STATUS.REMOVED) {
-      return `Property '${key}' was removed`
-    }
-    if (status === STATUS.CHANGED) {
-      return `Property '${key}' was updated. From ${formatValue(node.value1)} to ${formatValue(node.value2)}`
-    }
-    return ''
-  })
-
-  return lines.filter((line) => (line) !== '').join('\n')
+  return diff
+    .map((item) => {
+      switch (item.status) {
+        case STATUS.ADDED:
+          return `Property '${item.key}' was added with value: ${formatValue(item.value)}`
+        case STATUS.REMOVED:
+          return `Property '${item.key}' was removed`
+        case STATUS.CHANGED:
+          return `Property '${item.key}' was updated. From ${formatValue(item.value1)} to ${formatValue(item.value2)}`
+        default:
+          return ''
+      }
+    })
+    .filter((line) => line !== '')
+    .join('\n')
 }
