@@ -20,6 +20,6 @@ test-coverage:
 	npm run test-coverage
 
 gendiff:
-	node src/gendiff.js
-
+	node bin/gendiff.js __fixtures__/before.yml __fixtures__/after.yml
+	
 .PHONY: install test lint lint-fix fix test-watch test-coverage gendiff

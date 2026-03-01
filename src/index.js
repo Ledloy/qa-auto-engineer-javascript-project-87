@@ -35,6 +35,7 @@ const generateDiff = (data1, data2) => {
         status: STATUS.CHANGED,
       }
     }
+
     return { key, value: data1[key], status: STATUS.UNCHANGED }
   })
 }

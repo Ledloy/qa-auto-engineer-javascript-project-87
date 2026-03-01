@@ -2,7 +2,7 @@ export const formatValue = (value) => {
   if (typeof value === 'object' && value !== null) {
     return '[complex value]'
   }
-  return typeof value === 'string' ? `'${value}'` : String(value)
+  return String(value)
 }
 
 export const isObject = (value) =>
