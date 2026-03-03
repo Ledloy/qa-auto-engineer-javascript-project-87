@@ -15,6 +15,8 @@ export default [
       '@stylistic/comma-spacing': ['error', { before: false, after: true }],
       '@stylistic/no-multi-spaces': 'error',
       '@stylistic/no-multiple-empty-lines': ['error', { max: 1 }],
+      '@stylistic/comma-dangle': ['error', 'always-multiline'],
+      '@stylistic/brace-style': ['error', '1tbs'],
     },
   },
   {

@@ -1,4 +1,3 @@
-
 import { formatValue, isObject } from '../src/utils/formatValue.js'
 
 describe('formatValue', () => {
