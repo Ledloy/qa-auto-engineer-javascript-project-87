@@ -1,4 +1,3 @@
-
 import fs from 'fs'
 
 import path from 'path'
@@ -11,9 +10,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 describe('parsers', () => {
-
   const tempDir = path.join(__dirname, '__temp__')
-
   beforeAll(() => {
     if (!fs.existsSync(tempDir)) {
       fs.mkdirSync(tempDir, { recursive: true })

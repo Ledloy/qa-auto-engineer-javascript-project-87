@@ -24,7 +24,8 @@ program
       const absPath2 = path.resolve(filepath2)
       const result = genDiff(absPath1, absPath2, options.format)
       console.log(result)
-    } catch (error) {
+    } 
+    catch (error) {
       console.error(`\n❌ Error: ${error.message}\n`)
       process.exit(1)
     }
