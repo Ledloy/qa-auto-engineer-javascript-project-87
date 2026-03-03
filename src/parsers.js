@@ -33,7 +33,7 @@ export default (filepath) => {
   let data
   try {
     data = fs.readFileSync(filepath, 'utf8')
-  } 
+  }
   catch (error) {
     throw new Error(
       `Failed to read file: ${filepath}\nReason: ${error.message}`,
@@ -43,7 +43,7 @@ export default (filepath) => {
   const parser = getParser(filepath)
   try {
     return parser(data)
-  } 
+  }
   catch (error) {
     const ext = path.extname(filepath).slice(1).toLowerCase()
     throw new Error(
