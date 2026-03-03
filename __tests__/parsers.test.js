@@ -54,7 +54,7 @@ describe('parsers', () => {
 
     try {
       expect(() => parsers(filepath)).toThrow('Failed to read file')
-    } 
+    }
     finally {
       fs.chmodSync(filepath, '0644')
     }
